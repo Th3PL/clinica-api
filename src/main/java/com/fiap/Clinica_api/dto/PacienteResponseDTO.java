@@ -1,7 +1,11 @@
 package com.fiap.Clinica_api.dto;
 
 import com.fiap.Clinica_api.domain.model.Paciente;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class PacienteResponseDTO {
 
     private Long id;

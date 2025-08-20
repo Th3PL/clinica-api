@@ -6,6 +6,8 @@ import com.fiap.Clinica_api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PacienteService {
 
@@ -22,8 +24,8 @@ public class PacienteService {
         return repository.save(p);
     }
 
-    public Paciente findById(Paciente paciente) {
-        return repository.findById(paciente.getId()).get();
+    public Optional<Paciente> findById(Long id) {
+        return repository.findById(id);
     }
 
 }
