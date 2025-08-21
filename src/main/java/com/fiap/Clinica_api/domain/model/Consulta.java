@@ -1,5 +1,6 @@
 package com.fiap.Clinica_api.domain.model;
 
+import com.fiap.Clinica_api.dto.consulta.ConsultaCreateDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,4 +30,11 @@ public class Consulta {
 
     @Column(name = "data_hora", nullable = false)
     private LocalDateTime dataHora;
+
+    public Consulta(Medico medico, Paciente paciente) {
+        this.medico = medico;
+        this.paciente = paciente;
+        this.status = StatusConsulta.AGENDADA;
+        this.dataHora = LocalDateTime.now();
+    }
 }
