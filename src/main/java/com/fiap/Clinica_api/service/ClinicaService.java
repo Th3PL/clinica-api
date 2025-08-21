@@ -38,5 +38,14 @@ public class ClinicaService {
                 .orElseThrow(() -> new RuntimeException("Consulta não encontrada"));
 
         consulta.setStatus(StatusConsulta.CONFIRMADA);
+        consultaRepository.save(consulta);
+    }
+
+    public void cancelarConsulta(Long id) {
+        Consulta consulta = consultaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Consulta não encontrada"));
+
+        consulta.setStatus(StatusConsulta.CANCELADA);
+        consultaRepository.save(consulta);
     }
 }
