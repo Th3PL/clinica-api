@@ -1,8 +1,10 @@
 package com.fiap.Clinica_api.controller;
 
 import com.fiap.Clinica_api.domain.model.Consulta;
+import com.fiap.Clinica_api.domain.model.StatusConsulta;
 import com.fiap.Clinica_api.dto.consulta.ConsultaCreateDTO;
 import com.fiap.Clinica_api.dto.consulta.ConsultaResponseDTO;
+import com.fiap.Clinica_api.dto.medico.MedicoResponseDTO;
 import com.fiap.Clinica_api.service.ClinicaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +17,7 @@ public class ClinicaController {
     @Autowired
     ClinicaService service;
 
-    @PostMapping
+    @PostMapping("/novaConsulta")
     public ResponseEntity<ConsultaResponseDTO> novaConsulta(@RequestBody ConsultaCreateDTO dto){
         return ResponseEntity.status(201).body(new ConsultaResponseDTO().toDto(service.criarConsulta(dto)));
     }

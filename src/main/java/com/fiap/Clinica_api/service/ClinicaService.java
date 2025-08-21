@@ -11,6 +11,8 @@ import com.fiap.Clinica_api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ClinicaService {
 
@@ -47,5 +49,9 @@ public class ClinicaService {
 
         consulta.setStatus(StatusConsulta.CANCELADA);
         consultaRepository.save(consulta);
+    }
+
+    public Optional<Consulta> consultaPorId(Long id) {
+        return consultaRepository.findById(id);
     }
 }
