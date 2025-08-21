@@ -1,8 +1,8 @@
 package com.fiap.Clinica_api.controller;
 
-import com.fiap.Clinica_api.dto.Paciente.PacienteEditDto;
-import com.fiap.Clinica_api.dto.PacienteCreateDTO;
-import com.fiap.Clinica_api.dto.Paciente.PacienteResponseDTO;
+import com.fiap.Clinica_api.dto.paciente.PacienteEditDto;
+import com.fiap.Clinica_api.dto.paciente.PacienteCreateDTO;
+import com.fiap.Clinica_api.dto.paciente.PacienteResponseDTO;
 import com.fiap.Clinica_api.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.fiap.Clinica_api.dto;
+package com.fiap.Clinica_api.dto.paciente;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,8 +1,8 @@
 package com.fiap.Clinica_api.service;
 
 import com.fiap.Clinica_api.domain.model.Paciente;
-import com.fiap.Clinica_api.dto.Paciente.PacienteEditDto;
-import com.fiap.Clinica_api.dto.PacienteCreateDTO;
+import com.fiap.Clinica_api.dto.paciente.PacienteEditDto;
+import com.fiap.Clinica_api.dto.paciente.PacienteCreateDTO;
 import com.fiap.Clinica_api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
