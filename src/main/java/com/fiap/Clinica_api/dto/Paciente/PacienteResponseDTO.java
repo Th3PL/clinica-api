@@ -1,4 +1,4 @@
-package com.fiap.Clinica_api.dto;
+package com.fiap.Clinica_api.dto.Paciente;
 
 import com.fiap.Clinica_api.domain.model.Paciente;
 import lombok.Getter;
