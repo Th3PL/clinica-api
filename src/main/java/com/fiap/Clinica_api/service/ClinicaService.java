@@ -11,6 +11,7 @@ import com.fiap.Clinica_api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -53,5 +54,9 @@ public class ClinicaService {
 
     public Optional<Consulta> consultaPorId(Long id) {
         return consultaRepository.findById(id);
+    }
+
+    public List<Consulta> listarConsultasPorMedico(Long medicoId) {
+        return consultaRepository.findByMedicoId(medicoId);
     }
 }

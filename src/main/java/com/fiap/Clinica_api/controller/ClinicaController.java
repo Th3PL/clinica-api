@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/consultas")
 public class ClinicaController {
@@ -34,5 +36,14 @@ public class ClinicaController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/medico/{id}")
+    public ResponseEntity<List<ConsultaResponseDTO>> listarPorMedico(@PathVariable Long id) {
+        List<ConsultaResponseDTO> consultas = service.listarConsultasPorMedico(id)
+                .stream()
+                .map(c -> new ConsultaResponseDTO().toDto(c))
+                .toList();
+
+        return ResponseEntity.ok(consultas);
+    }
 
 }
