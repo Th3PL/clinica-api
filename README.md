@@ -9,7 +9,7 @@ API REST desenvolvida para gerenciar uma clínica médica, permitindo o cadastro
 | Recurso                | Endpoint          | Método | 
 |------------------------|-------------------|--------|
 | Criar paciente         | `/pacientes`      | POST   | 
-| Listar pacientes       | `/jogador`        | GET    |
+| Listar pacientes       | `/paciente`       | GET    |
 | Buscar paciente por ID | `/pacientes/{id}` | GET    |
 | Atualizar paciente     | `/pacientes/{id}` | PUT    |
 | Deletar paciente       | `/pacientes/{id}` | DELETE |
