@@ -5,6 +5,9 @@
 
 API REST desenvolvida para gerenciar uma clínica médica, permitindo o cadastro de pacientes e médicos, além do agendamento, confirmação e cancelamento de consultas.
 
+# 🎬 Vídeo Explicativo
+- [Assista Aqui](https://youtu.be/v3OGzlyDiyQ)
+
 ## 👤 Endpoints Paciente 
 | Recurso                | Endpoint          | Método | 
 |------------------------|-------------------|--------|
